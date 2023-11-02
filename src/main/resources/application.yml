@@ -1,0 +1,24 @@
+spring:
+  mySql-datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 1234
+    jdbcUrl: jdbc:mysql://localhost:3306/sys
+
+  postgreSql-datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: 1234
+    jdbcUrl: jdbc:postgresql://localhost:5555/postgres
+    
+  jpa:
+    hibernate:
+      ddl-auto: update 
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    open-in-view: true
+    
+server:
+  port: 5000
